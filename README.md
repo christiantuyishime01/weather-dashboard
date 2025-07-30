@@ -59,7 +59,7 @@ git clone <https://github.com/christiantuyishime01/weather-dashboard-application
 cd weather-dashboard
 
 # Build the Docker image
-docker build -t your-christiantuyishime/weather-dashboard:v1.
+docker build -t christiantuyishime/weather-dashboard:v1.
 
 # Test locally
 docker run -p 8080:8080 christiantuyishime/weather-dashboard:v1
@@ -72,7 +72,7 @@ Push to Docker Hub
 docker login
 
 # Tag the image
-docker tag your-dockerhub-username/weather-dashboard:v1 your-dockerhub-username/weather-dashboard:latest
+docker tag christiantuyishime/weather-dashboard:v1 christiantuyishime/weather-dashboard:latest
 
 # Push to Docker Hub
 docker push christiantuyishime/weather-dashboard:v1
@@ -155,11 +155,11 @@ User Experience Features
 •	Accessibility: Semantic HTML and keyboard navigation support
 Development Challenges and Solutions
 Challenge 1: API Rate Limiting
-Solution: Implemented caching mechanism and demo mode for development
+Solution: Implemented a caching mechanism and demo mode for development
 Challenge 2: Error Handling
 Solution: Comprehensive error handling with user-friendly messages
 Challenge 3: Responsive Design
-Solution: CSS Grid and Flexbox with mobile-first approach
+Solution: CSS Grid and Flexbox with a mobile-first approach
 Challenge 4: Cross-Origin Requests (CORS)
 Solution: Server-side proxy or CORS-enabled API endpoints
 Challenge 5: Data Synchronization
