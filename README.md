@@ -48,7 +48,7 @@ Running Locally
 4.	Navigate to http://localhost:8000
 Docker Deployment
 Image Details
-•	Docker Hub Repository: your-christiantuyishime/weather-dashboard
+•	Docker Hub Repository: christiantuyishime/weather-dashboard
 •	Image Tags: v1, latest
 •	Base Image: nginx:alpine
 •	Exposed Port: 8080
