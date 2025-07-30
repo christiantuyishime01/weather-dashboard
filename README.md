@@ -55,7 +55,7 @@ Image Details
 Build Instructions
 
 # Clone the repository
-git clone <https://github.com/christiantuyishime01/weather-dashboard.git>
+git clone <https://github.com/christiantuyishime01/weather-dashboard-application-api-summative.git>
 cd weather-dashboard
 
 # Build the Docker image
