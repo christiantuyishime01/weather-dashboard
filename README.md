@@ -238,15 +238,15 @@ journalctl -u docker
 Updates and Rollbacks
 
 # Update to new version
-docker pull your-dockerhub-username/weather-dashboard:v2
+docker pull christiantuyishime/weather-dashboard:v2
 docker stop weather-app
 docker rm weather-app
 docker run -d --name weather-app --restart unless-stopped \
-  -p 8080:8080 your-dockerhub-username/weather-dashboard:v2
+  -p 8080:8080 christiantuyishime/weather-dashboard:v2
 
 # Rollback if needed
 docker run -d --name weather-app --restart unless-stopped \
-  -p 8080:8080 your-dockerhub-username/weather-dashboard:v1
+  -p 8080:8080 christiantuyishime/weather-dashboard:v1
 Future Enhancements
 •	[ ] User authentication and personal weather profiles
 •	[ ] Weather alerts and notifications
