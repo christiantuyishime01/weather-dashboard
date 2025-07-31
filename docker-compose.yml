@@ -12,7 +12,8 @@ services:
     build: .
     container_name: web-01
     ports:
-      - "8082:8080"  # Different port
+      - "8082:8080"
+      - "2222:22"   # Different port
     networks:
       - weather-dashboard_default
 
@@ -37,8 +38,5 @@ services:
 
 networks:
   weather-dashboard_default:
-<<<<<<< HEAD
     driver: bridge
-=======
-    driver: bridge
->>>>>>> f85547811ddb724d8c0c80db747d113ff6990b8b
+
