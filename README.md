@@ -1,15 +1,24 @@
 Weather Dashboard Application
 A comprehensive weather application that provides real-time weather data and 5-day forecasts for cities worldwide. This application serves a practical purpose by helping users make informed decisions about their daily activities based on current weather conditions.
-Features
-•	Real-time Weather Data: Get current weather conditions for any city
+
+•	Real-time Weather Data: Get current weather conditions for any city.
+
 •	Location-based Weather: Use your current location to get local weather
+
 •	5-Day Forecast: View upcoming weather predictions
+
 •	Multiple Cities: Track weather for multiple cities simultaneously
+
 •	Unit Conversion: Switch between Celsius, Fahrenheit, and Kelvin
+
 •	Data Sorting: Sort by city name, temperature, or search time
+
 •	Data Filtering: Filter and search weather data
+
 •	Responsive Design: Works on desktop and mobile devices
+
 •	Error Handling: Graceful handling of API failures and invalid inputs
+
 API Used
 This application uses the OpenWeatherMap API (in demo mode for this assignment):
 •	API Documentation: https://openweathermap.org/api

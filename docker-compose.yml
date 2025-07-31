@@ -1,21 +1,40 @@
 version: '3.8'
-
 services:
   weather-app:
     build: .
+    container_name: weather-dashboard-weather-app-1
     ports:
-      - "8080:8080"
-    environment:
-      - NODE_ENV=production
-      - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY:-demo}
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+      - "8081:8080"  # Changed from 8080:8080
+    networks:
+      - weather-dashboard_default
+
+  web-01:
+    build: .
+    container_name: web-01
+    ports:
+      - "8082:8080"  # Different port
+    networks:
+      - weather-dashboard_default
+
+  web-02:
+    build: .
+    container_name: web-02
+    ports:
+      - "8083:8080"  # Different port
+    networks:
+      - weather-dashboard_default
+
+  lb-01:
+    image: nginx:alpine
+    container_name: lb-01
+    ports:
+      - "8084:80"    # Different port
+    networks:
+      - weather-dashboard_default
+    depends_on:
+      - web-01
+      - web-02
 
 networks:
-  default:
+  weather-dashboard_default:
     driver: bridge
