@@ -1,6 +1,7 @@
 Weather Dashboard Application
 A comprehensive weather application that provides real-time weather data and 5-day forecasts for cities worldwide. This application serves a practical purpose by helping users make informed decisions about their daily activities based on current weather conditions.
 
+<<<<<<< HEAD
 •	Real-time Weather Data: Get current weather conditions for any city.
 
 •	Location-based Weather: Use your current location to get local weather
@@ -20,13 +21,42 @@ A comprehensive weather application that provides real-time weather data and 5-d
 •	Error Handling: Graceful handling of API failures and invalid inputs
 
 API Used
+=======
+Features
+
+•	Real-time Weather Data: Get current weather conditions for any city.
+
+•	Location-based Weather: Use your current location to get local weather.
+
+•	5-Day Forecast: View upcoming weather predictions.
+
+•	Multiple Cities: Track weather for multiple cities simultaneously.
+
+•	Unit Conversion: Switch between Celsius, Fahrenheit, and Kelvin.
+
+•	Data Sorting: Sort by city name, temperature, or search time.
+
+•	Data Filtering: Filter and search weather data.
+
+•	Responsive Design: Works on desktop and mobile devices.
+
+•	Error Handling: Graceful handling of API failures and invalid inputs
+API Used.
+
+>>>>>>> f85547811ddb724d8c0c80db747d113ff6990b8b
 This application uses the OpenWeatherMap API (in demo mode for this assignment):
-•	API Documentation: https://openweathermap.org/api
-•	Current Weather API: Provides real-time weather data
-•	5-Day Forecast API: Provides weather predictions
-•	Geocoding API: Converts city names to coordinates
+
+•	API Documentation: https://openweathermap.org/api.
+
+•	Current Weather API: Provides real-time weather data.
+
+•	5-Day Forecast API: Provides weather predictions.
+
+•	Geocoding API: Converts city names to coordinates.
+
 Note: For demo purposes, this application uses mock data. In production, you would need to:
-1.	Sign up for a free API key at OpenWeatherMap
+
+1.	Sign up for a free API key at OpenWeatherMap.
 2.	Replace the demo API key with your actual key
 3.	Remove the demo data simulation
 Local Development
@@ -40,42 +70,45 @@ Running Locally
 4.	Navigate to http://localhost:8000
 Docker Deployment
 Image Details
-•	Docker Hub Repository: your-dockerhub-username/weather-dashboard
+•	Docker Hub Repository: christiantuyishime/weather-dashboard
 •	Image Tags: v1, latest
 •	Base Image: nginx:alpine
 •	Exposed Port: 8080
 Build Instructions
+
 # Clone the repository
-git clone <your-repo-url>
+git clone <https://github.com/christiantuyishime01/weather-dashboard-application-api-summative.git>
 cd weather-dashboard
 
 # Build the Docker image
-docker build -t your-dockerhub-username/weather-dashboard:v1 .
+docker build -t christiantuyishime/weather-dashboard:v1.
 
 # Test locally
-docker run -p 8080:8080 your-dockerhub-username/weather-dashboard:v1
+docker run -p 8080:8080 christiantuyishime/weather-dashboard:v1
 
 # Verify it works
 curl http://localhost:8080
 Push to Docker Hub
+
 # Login to Docker Hub
 docker login
 
 # Tag the image
-docker tag your-dockerhub-username/weather-dashboard:v1 your-dockerhub-username/weather-dashboard:latest
+docker tag christiantuyishime/weather-dashboard:v1 christiantuyishime/weather-dashboard:latest
 
 # Push to Docker Hub
-docker push your-dockerhub-username/weather-dashboard:v1
-docker push your-dockerhub-username/weather-dashboard:latest
+docker push christiantuyishime/weather-dashboard:v1
+docker push christiantuyishime/weather-dashboard:latest
 Web Server Deployment
 Deploy on Web01 and Web02
+
 # SSH into web-01
 ssh user@web-01
 
 # Pull and run the image
-docker pull your-dockerhub-username/weather-dashboard:v1
+docker pull christiantuyishime/weather-dashboard:v1
 docker run -d --name weather-app --restart unless-stopped \
-  -p 8080:8080 your-dockerhub-username/weather-dashboard:v1
+  -p 8080:8080 christiantuyishime/weather-dashboard:v1
 
 # Verify it's running
 curl http://localhost:8080/health
@@ -144,11 +177,11 @@ User Experience Features
 •	Accessibility: Semantic HTML and keyboard navigation support
 Development Challenges and Solutions
 Challenge 1: API Rate Limiting
-Solution: Implemented caching mechanism and demo mode for development
+Solution: Implemented a caching mechanism and demo mode for development
 Challenge 2: Error Handling
 Solution: Comprehensive error handling with user-friendly messages
 Challenge 3: Responsive Design
-Solution: CSS Grid and Flexbox with mobile-first approach
+Solution: CSS Grid and Flexbox with a mobile-first approach
 Challenge 4: Cross-Origin Requests (CORS)
 Solution: Server-side proxy or CORS-enabled API endpoints
 Challenge 5: Data Synchronization
@@ -215,6 +248,7 @@ Health Checks
 •	HAProxy health monitoring
 •	Container status monitoring
 Logs
+
 # Application logs
 docker logs weather-app
 
@@ -224,16 +258,17 @@ docker logs lb-01
 # System logs
 journalctl -u docker
 Updates and Rollbacks
+
 # Update to new version
-docker pull your-dockerhub-username/weather-dashboard:v2
+docker pull christiantuyishime/weather-dashboard:v2
 docker stop weather-app
 docker rm weather-app
 docker run -d --name weather-app --restart unless-stopped \
-  -p 8080:8080 your-dockerhub-username/weather-dashboard:v2
+  -p 8080:8080 christiantuyishime/weather-dashboard:v2
 
 # Rollback if needed
 docker run -d --name weather-app --restart unless-stopped \
-  -p 8080:8080 your-dockerhub-username/weather-dashboard:v1
+  -p 8080:8080 christiantuyishime/weather-dashboard:v1
 Future Enhancements
 •	[ ] User authentication and personal weather profiles
 •	[ ] Weather alerts and notifications
